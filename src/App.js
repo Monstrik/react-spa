@@ -10,9 +10,12 @@ import {
 import HomePage from  "./components/pages/HomePage";
 import TermPage from "./components/pages/TermPage";
 import HelpPage from  "./components/pages/HelpPage";
+import HelTempCalcPagepPage from  "./components/pages/TempCalcPage";
+
 import LoginControl from "./components/controls/LoginControl";
 
 import MyClock from "./components/boxes/MyClock";
+import TempCalcPage from './components/pages/TempCalcPage';
 
 
 
@@ -25,6 +28,7 @@ class App extends Component {
         <li><NavLink exact to="/">Home</NavLink></li>
         <li><NavLink to="/term">Terminal</NavLink></li>
         <li><NavLink to="/help">Help</NavLink></li>
+        <li><NavLink to="/tCalc">TempCalc</NavLink></li>
         <li> </li>
         <li> </li>
         <li> </li>
@@ -48,6 +52,8 @@ class App extends Component {
           <Route exact path="/" component={HomePage}/>
           <Route path="/term" component={TermPage} />
           <Route path="/help" component={HelpPage} />
+          <Route path="/tCalc" component={TempCalcPage} />
+          
       </div>
     </div>
     </HashRouter>
