@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Button from '@material-ui/core/Button';
+import NickNameForm from "../forms/NickNameForm";
 class TermPage extends Component {
 
   constructor(props) {
@@ -32,6 +33,8 @@ class TermPage extends Component {
          onClick={this.handleClick}>
          {this.state.isToggleOn ? 'ON' : 'OFF'}
         </Button>
+        <hr/>
+        <NickNameForm/>
 
       </div>
     );
