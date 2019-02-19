@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import '../../App.css';
 class MyClock extends Component {
 
+    
+
     constructor(props) {
       super(props);
       this.state = {date: new Date()};
@@ -25,9 +27,28 @@ class MyClock extends Component {
     }
 
     render() {
-        return <strong className="whiteColor">     
-           {this.state.date.toLocaleTimeString()}
-        </strong>;
+        return <span>
+         
+          {/* {this.props.color==="white" &&  
+           <strong className="whiteColor">   
+            {this.state.date.toLocaleTimeString()}
+            </strong>
+          }
+
+          {this.props.color!=="white" &&  
+           <strong >   
+            {this.state.date.toLocaleTimeString()}
+            </strong>
+          } */}
+
+          {this.props.color==="white" ? (
+            <strong className="whiteColor">{this.state.date.toLocaleTimeString()}</strong>
+          ) : (
+            <strong>{this.state.date.toLocaleTimeString()}</strong>
+      )}
+
+         
+        </span>;
     }
 
 }

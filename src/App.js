@@ -32,14 +32,14 @@ class App extends Component {
         <li> </li>
         <li> </li>
         <li> </li>
-        <li> <MyClock/></li>
+        <li> <MyClock color="white" /></li>
         <li> </li>
         <li> </li>
         <li> </li>
         <li> </li>
         <li> </li>
         <li> </li>
-        
+
         <li> <LoginControl/></li>
 
 
