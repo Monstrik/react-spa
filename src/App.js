@@ -10,6 +10,7 @@ import {
 import HomePage from  "./components/pages/HomePage";
 import TermPage from "./components/pages/TermPage";
 import HelpPage from  "./components/pages/HelpPage";
+import MyClock from "./components/boxes/MyClock";
 
 
 
@@ -18,6 +19,7 @@ class App extends Component {
     return (
       <HashRouter>
       <div>
+      <MyClock/>
       {/* <h1>SPA</h1> */}
       <ul className="header">
         <li><NavLink exact to="/">Home</NavLink></li>
