@@ -5,7 +5,7 @@ class Message extends Component {
 
     render() {
         return <strong>
-            {this.props.text}        <FuncComponent />
+            {this.props.text}<FuncComponent />
         </strong>;
     }
     

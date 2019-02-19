@@ -10,7 +10,7 @@ class HomePage extends Component {
       <div>
          <h2>Home</h2>         
          <Welcome name="Alex"/>
-         <Message text="Hi"/>
+         <Message text="Hi "/>
          
       </div>
     );
