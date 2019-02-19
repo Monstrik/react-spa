@@ -28,7 +28,7 @@ class TermPage extends Component {
       <div>
         <h2>Terminal</h2>
         <hr/>
-        <Button variant="contained" color="primary"
+        <Button variant="contained" color="primary" size="small"
          onClick={this.handleClick}>
          {this.state.isToggleOn ? 'ON' : 'OFF'}
         </Button>
