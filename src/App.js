@@ -8,14 +8,15 @@ import {
 } from "react-router-dom";
 
 import HomePage from "./components/pages/HomePage";
+import ChatPage from "./components/pages/ChatPage";
 import TermPage from "./components/pages/TermPage";
 import HelpPage from "./components/pages/HelpPage";
-import HelTempCalcPagepPage from "./components/pages/TempCalcPage";
+import TempCalcPage from "./components/pages/TempCalcPage";
 
 import LoginControl from "./components/controls/LoginControl";
 
 import MyClock from "./components/boxes/MyClock";
-import TempCalcPage from './components/pages/TempCalcPage';
+
 
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
                 <div>
                     <ul className="header">
                         <li><NavLink exact to="/">Home</NavLink></li>
+                        <li><NavLink exact to="/chat">Chat</NavLink></li>
                         <li><NavLink to="/term">Terminal</NavLink></li>
                         <li><NavLink to="/help">Help</NavLink></li>
                         <li><NavLink to="/tCalc">TempCalc</NavLink></li>
@@ -49,6 +51,7 @@ class App extends Component {
                     </ul>
                     <div className="content">
                         <Route exact path="/" component={HomePage}/>
+                        <Route exact path="/chat" component={ChatPage}/>
                         <Route path="/term" component={TermPage}/>
                         <Route path="/help" component={HelpPage}/>
                         <Route path="/tCalc" component={TempCalcPage}/>
