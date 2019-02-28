@@ -1,0 +1,9 @@
+.btn-flat {
+    background-color: #FFCC00;
+    color: black;
+}
+
+.btn-xxl {
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+}

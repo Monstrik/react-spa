@@ -3,18 +3,18 @@ import MessageList from "../boxes/MessageList ";
 import SendMessageForm from "../forms/SendMessageForm";
 import Chatkit from "@pusher/chatkit";
 
-const DUMMY_DATA = [
-  {
-    id: 1,
-    senderId: "perborgen",
-    text: "who'll win?"
-  },
-  {
-    id: 2,
-    senderId: "janedoe",
-    text: "who'll win?"
-  }
-];
+// const DUMMY_DATA = [
+//   {
+//     id: 1,
+//     senderId: "perborgen",
+//     text: "who'll win?"
+//   },
+//   {
+//     id: 2,
+//     senderId: "janedoe",
+//     text: "who'll win?"
+//   }
+// ];
 
 // const instanceLocator = "v1:us1:dfaf1e22-2d33-45c9-b4f8-31f634621d24"
 // const testToken = "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/dfaf1e22-2d33-45c9-b4f8-31f634621d24/token"

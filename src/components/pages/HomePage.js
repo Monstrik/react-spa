@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Welcome from "../boxes/Welcome";
 import Message from "../boxes/Message";
+import ThemeSwitcher from "../controls/ThemeSwitcher";
 
 
 class HomePage extends Component {
@@ -10,7 +11,7 @@ class HomePage extends Component {
                 <h2>Home</h2>
                 <Welcome name="Alex"/>
                 <Message text="Hi "/>
-
+                <ThemeSwitcher/>
             </div>
         );
     }

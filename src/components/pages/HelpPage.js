@@ -1,21 +1,6 @@
 import React, {Component} from "react";
+import {Container, Row, Col} from 'react-bootstrap'
 
-
-function UserGreeting(props) {
-    return <h1>Welcome back!</h1>;
-}
-
-function GuestGreeting(props) {
-    return <h1>Please sign up.</h1>;
-}
-
-function Greeting(props) {
-    const isLoggedIn = props.isLoggedIn;
-    if (isLoggedIn) {
-        return <UserGreeting/>;
-    }
-    return <GuestGreeting/>;
-}
 
 
 class HelpPage extends Component {
@@ -33,8 +18,19 @@ class HelpPage extends Component {
         return (
             <div>
                 <h2>Help</h2>
+                <Container>
+                    <Row>
+                        <Col>1 of 2</Col>
+                        <Col>2 of 2</Col>
+                    </Row>
+                    <Row>
+                        <Col>1 of 3</Col>
+                        <Col>2 of 3</Col>
+                        <Col>3 of 3</Col>
+                    </Row>
+                </Container>
                 <hr/>
-                <Greeting isLoggedIn={false}/>
+
                 <ul>{listItems}</ul>
                 <ul>{todoItems}</ul>
                 <ul>
