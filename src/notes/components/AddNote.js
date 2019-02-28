@@ -9,28 +9,25 @@ class AddNote extends React.Component {
     }
 
     updateInput = input => {
-        console.log('AddNote updateInput invoked',input);
+        // console.log('AddNote updateInput invoked',input);
         this.setState({input});
     };
 
     handleAddNote = () => {
-        console.log('AddNote handleAddNote invoked', this.state.input);
-        this.props.addNote(this.state.input);
         this.setState({input: ""});
+        this.props.addNote(this.state.input);
     };
 
     render() {
         return (
             <div>
-                <input
-                    onChange={e => this.updateInput(e.target.value)}
-                    value={this.state.input}
-                />
+                <input value={this.state.input}
+                       onChange={e => this.updateInput(e.target.value)}/>
+
                 <button onClick={this.handleAddNote}>Save</button>
             </div>
         );
     }
 }
 
-export default connect(null, {addNote})(AddNote);
-// export default AddNote
+export default connect(null, {addNote})(AddNote); // export default AddNote

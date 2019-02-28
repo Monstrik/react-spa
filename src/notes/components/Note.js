@@ -4,11 +4,12 @@ import cx from "classnames";
 import {toggleNote} from "../redux/actions";
 
 const Note = ({ note, toggleNote}) => (
-    <div className="todo-item">
+    <div className="note-item">
         {note && note.completed ? "📁" : "📝"}{" "}
         <span
-            className={cx("note-item__text",
-                note && note.completed && "note-item__text--completed"
+            className={cx(
+                "note-item",
+                note && note.completed && "note-item-text-completed"
             )}>
           {note.content}
         </span>

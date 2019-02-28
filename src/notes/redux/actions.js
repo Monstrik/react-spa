@@ -1,4 +1,4 @@
-import {ADD_NOTE, TOGGLE_NOTE, SET_FILTER} from "./actionTypes";
+import {ADD_NOTE, TOGGLE_NOTE, SET_FILTER,RESET_ALL} from "./actionTypes";
 
 let nextNoteId = 0;
 
@@ -20,5 +20,10 @@ export const setFilter = filter => ({
     type: SET_FILTER,
     payload: {filter}
 });
+
+export const resetAll = () => ({
+    type: RESET_ALL
+});
+
 
 

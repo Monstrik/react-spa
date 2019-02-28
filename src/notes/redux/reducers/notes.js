@@ -1,4 +1,4 @@
-import {ADD_NOTE, TOGGLE_NOTE} from '../actionTypes'
+import {ADD_NOTE, RESET_ALL, TOGGLE_NOTE} from '../actionTypes'
 
 const initialState = {
     allIds: [],
@@ -34,6 +34,8 @@ const notes = (state = initialState, action) => {
                 }
             };
         }
+        case RESET_ALL:
+            return initialState;
         default:
             return state
     }

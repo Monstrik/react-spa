@@ -1,16 +1,18 @@
 import React from "react";
 import cx from "classnames";
+
 import {connect} from "react-redux";
-import {setFilter} from "../redux/actions";
+import {setFilter, resetAll} from "../redux/actions";
 
 import {VISIBILITY_FILTERS} from "../constants";
 
-const Filters = ({activeFilter, setFilter}) => {
+const Filters = ({activeFilter, setFilter, resetAll}) => {
     return (
-        <div>
+        <div className="text-center">
             {Object.keys(VISIBILITY_FILTERS).map(filterKey => {
                 const currentFilter = VISIBILITY_FILTERS[filterKey];
                 return (
+
                     <span
                         key={`visibility-filter-${currentFilter}`}
                         className={cx(
@@ -23,14 +25,22 @@ const Filters = ({activeFilter, setFilter}) => {
                     >
                         | {currentFilter} |
                     </span>
+
+
                 );
             })}
+            <br/><br/><br/>
+            <span className="alert-danger" onClick={() => {
+                resetAll();
+            }}>
+                RESET ALL!
+            </span>
         </div>
     );
 };
 
 const mapStateToProps = state => {
-    return {activeFilter: state.visibilityFilter};
+    return {activeFilter: state.filter};
 };
-// export default Filters;
-export default connect(mapStateToProps, {setFilter})(Filters);
+
+export default connect(mapStateToProps, {setFilter, resetAll})(Filters); // export default Filters;
